@@ -1,0 +1,37 @@
+<br />
+<hr />
+<h2 style="background-color: rgb(226, 238, 156);margin-left: 0%; width: 100%;text-align: center;">All
+    Booking List</h2>
+
+
+<div class="MyBookings">
+    <table style="height:100% ;text-align:initial;">
+        <tr>
+            <td>
+                <h4>By Destination Airport</h4>
+                <input type="text" #destinationAirport>
+                <button (click)="getBooking(destinationAirport.value)">Load Booking</button>
+            </td>
+            <td>
+                <h4>By Date Of Booking</h4>
+                <input type="text" #dateOfBooking>
+                <button (click)="getBooking1(dateOfBooking.value)">Load Booking</button>
+            </td>
+            <td>
+                <h4>Booking By time</h4>
+                <input type="text" #timeOfBooking>
+                <button (click)="getBooking2(timeOfBooking.value)">Load Booking</button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- <h2>All Bookings List</h2> -->
+    <div *ngFor="let b of allBooking">
+        <table>
+            <tr>Time Of Booking : {{b.timeOfBooking}}</tr>
+            <tr>Date Of Booking : {{b.dateOfBooking}}</tr>
+            <tr>Source Airport : {{b.sourceAirport}}</tr>
+            <tr>Destination Airport:{{b.destinationAirport}}</tr>
+            <hr />
+        </table>
+    </div>

@@ -1,0 +1,13 @@
+.searchflight{
+
+    background-image:url("/assets/image/airplane2.jpg");
+    background-size: cover;
+    background-position:cover;
+
+    border:black 3px solid;
+    color:rgb(0, 0, 0) ;
+    font-size: larger;
+    
+    width: 1250px;
+    height: 700px;
+}
